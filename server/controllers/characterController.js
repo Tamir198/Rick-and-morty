@@ -1,7 +1,9 @@
-exports.getSingleCharacter = (req, res) => {
-    res.send(`You are asking for character with id of ${req.params.id}`);
+const characterApi = require("../api/characterApi");
+
+exports.getSingleCharacter = async(req, res) => {
+    res.send(await characterApi.getCharacterById(req.params.id));
 }
 
-exports.getAllCharacters = (req, res) => {
-    res.send(`You are asking for all characters`);
+exports.getAllCharacters = (req, response) => {
+    response.send(`You are asking for all characters`);
 }
