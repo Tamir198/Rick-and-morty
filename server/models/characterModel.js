@@ -1,6 +1,7 @@
-class Character {
+module.exports = class Character {
 
-    constructor(name, status, species, origin, location) {
+    constructor(id, name, status, species, origin, location) {
+        this.id = id;
         this.name = name;
         this.status = status;
         this.species = species;
