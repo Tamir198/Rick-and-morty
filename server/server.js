@@ -1,11 +1,11 @@
-const express = require('express')
-const app = express()
-const port = 4000
+const express = require('express');
+const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Welcome to the server ')
-});
+const confige = require("./confige.json")
+const characterRoutes = require("./routes/character");
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+app.use(characterRoutes);
+
+app.listen(confige.port, () => {
+    console.log(`Listening on port ${confige.port}`);
 })
