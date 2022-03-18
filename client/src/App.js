@@ -1,5 +1,5 @@
 import SideNav from "./sideNavigation/SideNav";
-import { Link } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 
 function App() {
   return (
@@ -7,12 +7,12 @@ function App() {
       <button>Rick and mory app</button>
       <SideNav></SideNav>
       <nav>
-        <Link to="/allcharacters">All characters</Link> |{" "}
-        <Link to="/singleChatacter">Single character</Link>
+        <NavLink to="/allcharacters">All characters</NavLink> |{" "}
+        <NavLink to="/singleChatacter">Single character</NavLink>
       </nav>
-
+      <Outlet/>
     </div>
-  );
+  )
 }
 
 export default App;
