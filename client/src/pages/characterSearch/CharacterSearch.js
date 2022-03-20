@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import axios from 'axios';
 
 import './characterSearch.css'
@@ -15,7 +15,6 @@ const CharacterSearch = () => {
         setCharcterData(res.data);
       })
   }
-
 
   return (
     <div >

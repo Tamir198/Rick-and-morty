@@ -1,9 +1,28 @@
-body {
-    background: gray;
+:root {
+    --dark-grey-background: #24282f;
+    --card-border-color: rgb(140, 130, 115);
+    --card-color: rgb(48, 52, 54);
+    --text-color: #e8e6e3;
 }
 
-button {
-    color: black;
-    margin: 0 auto;
-    display: block;
+body {
+    background: var(--dark-grey-background);
+}
+
+.character__container {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--card-color);
+    border-radius: 2rem;
+    border: 0.4rem black solid;
+    padding: 1rem;
+}
+
+.character__container>* {
+    color: var(--text-color);
+}
+
+.character__container img {
+    border-radius: 50%;
 }
