@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllCharacters from './componenets/AllCharacters';
-import SingleCharacter from './componenets/SingleCharacter/SingleCharacter';
+import CharacterSearch from './pages/characterSearch/CharacterSearch';
 import PageNotFound from './pages/PageNotFound';
 
 ReactDOM.render(
@@ -13,7 +13,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="allcharacters" element={<AllCharacters />} />
-          <Route path="singleChatacter" element={<SingleCharacter />} />
+          <Route path="singleChatacter" element={<CharacterSearch />} />
         <Route path="*" element={<PageNotFound/>} ></Route>
         </Route>
       </Routes>   

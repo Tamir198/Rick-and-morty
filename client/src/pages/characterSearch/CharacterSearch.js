@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios';
 
-import './SingleCharacter.css'
+import './characterSearch.css'
+import { Character } from '../../componenets/Character';
 
-const SingleCharacter = () => {
+const CharacterSearch = () => {
 
   const inputRef = useRef('');
   const [charcterData, setCharcterData] = useState(false);
@@ -21,17 +22,18 @@ const SingleCharacter = () => {
       <input type="number" min="1" max="800" ref={inputRef} />
       <button type="submit" onClick={() => getCharacterById()}>Enter</button>
 
-      {charcterData && <div className="character__container">
-      <h4>{charcterData.name}</h4>
-      <p>Character number {charcterData.id}</p>
-      <p>status {charcterData.status}</p>
-      <p>species {charcterData.species}</p>
-      <p>origin {charcterData.origin}</p>
-      <img src={charcterData.image} alt="The character image"/>
-      </div>
+      {charcterData &&
+        <Character
+          name={charcterData.name}
+          id={charcterData.id}
+          status={charcterData.status}
+          species={charcterData.species}
+          origin={charcterData.origin}
+          image={charcterData.image}
+        />
       }
     </div>
   )
 }
 
-export default SingleCharacter;
+export default CharacterSearch;
