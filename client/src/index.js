@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllCharacters from './componenets/AllCharacters';
-import SingleCharacter from './componenets/SingleCharacter';
+import SingleCharacter from './componenets/SingleCharacter/SingleCharacter';
 import PageNotFound from './pages/PageNotFound';
 
 ReactDOM.render(
