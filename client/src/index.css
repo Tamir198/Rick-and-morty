@@ -9,33 +9,10 @@ body {
     background: var(--dark-grey-background);
 }
 
-.character__container {
-    width: 40rem;
-    display: flex;
-    flex-direction: row;
-    background: var(--card-color);
-    border-radius: 2rem;
-    border: 0.4rem black solid;
-    padding: 1rem;
-    justify-content: space-between;
-    margin: auto;
+.centered-text {
+    text-align: center;
 }
 
-.character__container>* {
+.title {
     color: var(--text-color);
-    font-size: 1rem;
-}
-
-.character__container img {
-    border-radius: 50%;
-}
-
-.character__container h1 {
-    border-radius: 50%;
-}
-
-.search-bar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
 }

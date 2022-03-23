@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import axios from 'axios';
 
-import './characterSearch.css'
+import Styles from './characterSearch.module.css'
 import { Character } from '../../componenets/Character';
 import CharacterModel from '../../models/CharacterModel';
 
@@ -21,8 +21,9 @@ const CharacterSearch = () => {
   }
 
   return (
-    <div className="page__container">
-      <div className="search-bar">
+    <div>
+      <h1 className="centered-text title">Enter A number - get a character</h1>
+      <div className={Styles.searchBar__container}>
         <input type="number" placeholder="1-800" min="1" max="800" ref={inputRef} />
         <button type="submit" onClick={() => getCharacterById()}>Enter</button>
       </div>
@@ -38,7 +39,10 @@ const CharacterSearch = () => {
         )}
         />
       }
+      <h1 className="centered-text title">Waba laba dab dab</h1>
     </div>
+
+
   )
 }
 
