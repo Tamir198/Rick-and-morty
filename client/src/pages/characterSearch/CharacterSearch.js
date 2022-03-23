@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import './characterSearch.css'
 import { Character } from '../../componenets/Character';
+import CharacterModel from '../../models/CharacterModel';
 
 const CharacterSearch = () => {
 
@@ -10,25 +11,30 @@ const CharacterSearch = () => {
   const [charcterData, setCharcterData] = useState(false);
 
   const getCharacterById = () => {
-    axios.get(`http://localhost:4000/singleCharacter/${inputRef.current.value}`)
+    const pageNumber = inputRef.current.value;
+    if(pageNumber > 800) return;
+    axios.get(`http://localhost:4000/singleCharacter/${pageNumber}`)
       .then(res => {
         setCharcterData(res.data);
       })
   }
 
   return (
-    <div >
-      <input type="number" min="1" max="800" ref={inputRef} />
-      <button type="submit" onClick={() => getCharacterById()}>Enter</button>
+    <div className="page__container">
+      <div className="search-bar">
+        <input type="number" min="1" max="800" ref={inputRef} />
+        <button type="submit" onClick={() => getCharacterById()}>Enter</button>
+      </div>
 
       {charcterData &&
-        <Character
-          name={charcterData.name}
-          id={charcterData.id}
-          status={charcterData.status}
-          species={charcterData.species}
-          origin={charcterData.origin}
-          image={charcterData.image}
+        <Character character={new CharacterModel(
+          charcterData.name,
+          charcterData.id,
+          charcterData.status,
+          charcterData.species,
+          charcterData.origin,
+          charcterData.image
+        )}
         />
       }
     </div>
