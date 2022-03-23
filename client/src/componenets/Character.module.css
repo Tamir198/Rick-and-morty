@@ -1,0 +1,36 @@
+.character__container {
+    width: 40rem;
+    display: flex;
+    flex-direction: row;
+    background: var(--card-color);
+    border-radius: 2rem;
+    border: 0.4rem black solid;
+    padding: 1rem;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.character__container>* {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.character__container img {
+    border-radius: 50%;
+}
+
+.character__container h1 {
+    border-bottom: 2px solid black;
+}
+
+@media only screen and (max-width: 800px) {
+    .character__container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 80%;
+    }
+    .character__image {
+        max-width: 20rem;
+    }
+}

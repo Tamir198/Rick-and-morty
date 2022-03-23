@@ -1,5 +1,18 @@
-button {
-    color: black;
-    margin: 0 auto;
-    display: block;
+:root {
+    --dark-grey-background: #24282f;
+    --card-border-color: rgb(140, 130, 115);
+    --card-color: rgb(48, 52, 54);
+    --text-color: #e8e6e3;
+}
+
+body {
+    background: var(--dark-grey-background);
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.title {
+    color: var(--text-color);
 }
