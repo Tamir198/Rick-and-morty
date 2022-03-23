@@ -33,3 +33,9 @@ body {
 .character__container h1 {
     border-radius: 50%;
 }
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}

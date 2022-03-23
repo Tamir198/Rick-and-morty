@@ -12,7 +12,8 @@ const CharacterSearch = () => {
 
   const getCharacterById = () => {
     const pageNumber = inputRef.current.value;
-    if(pageNumber > 800) return;
+    if (pageNumber > 800) return;
+
     axios.get(`http://localhost:4000/singleCharacter/${pageNumber}`)
       .then(res => {
         setCharcterData(res.data);
@@ -22,7 +23,7 @@ const CharacterSearch = () => {
   return (
     <div className="page__container">
       <div className="search-bar">
-        <input type="number" min="1" max="800" ref={inputRef} />
+        <input type="number" placeholder="1-800" min="1" max="800" ref={inputRef} />
         <button type="submit" onClick={() => getCharacterById()}>Enter</button>
       </div>
 
