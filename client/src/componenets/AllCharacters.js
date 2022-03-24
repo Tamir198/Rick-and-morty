@@ -6,7 +6,7 @@ import Styles from './AllCharacters.module.css'
 import axios from 'axios';
 
 const AllCharacters = () => {
-  const [charctersData, setCharctersData] = useState(false);
+  const [charctersData, setCharctersData] = useState([]);
   const pageNumber = 1;
 
   useEffect(async () => {
@@ -21,7 +21,9 @@ const AllCharacters = () => {
     <>
       <div className="title">TODO enter galerry here</div>
       <div className={Styles.grid}>
-        {charctersData.map(item => <Character character={
+        {charctersData.map(item => <Character
+        className={`${Styles.grid__item} ${Styles.character__grid}`}
+        character={
           new CharacterModel(
             item.name,
             item.id,

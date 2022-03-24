@@ -1,5 +1,14 @@
 .grid{
-    /* display: grid; */
-    /* grid-template-columns: repeat(3, 1fr); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;    
+}
+
+.grid img{
+    width: 80%;
+}
+
+.grid>{
+    flex-direction: column;
 }
 
