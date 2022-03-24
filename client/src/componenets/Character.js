@@ -1,7 +1,7 @@
 import React from 'react'
 import Styles from './Character.module.css'
 
-export const Character = (props) => {
+ const Character = (props) => {
   const data = props.character;
   return (
     <div className={Styles.character__container}>
@@ -16,4 +16,6 @@ export const Character = (props) => {
     </div>
   )
 }
+
+export default Character;
 

@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import axios from 'axios';
 
 import Styles from './characterSearch.module.css'
-import { Character } from '../../componenets/Character';
+import Character from '../../componenets/Character';
 import CharacterModel from '../../models/CharacterModel';
 
 const CharacterSearch = () => {
