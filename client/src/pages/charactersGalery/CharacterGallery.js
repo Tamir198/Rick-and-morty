@@ -1,12 +1,13 @@
 import React from 'react'
 import AllCharacters from '../../componenets/AllCharacters'
 
-const CharacterGalery = () => {
+const CharacterGallery = () => {
   return (
     <div>
-        <AllCharacters></AllCharacters>
+      <AllCharacters pageNum="1" />
+      
     </div>
   )
 }
 
-export default CharacterGalery
+export default CharacterGallery
