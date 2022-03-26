@@ -1,0 +1,18 @@
+ul {
+    display: flex;
+    font-size: 1.2em;
+    gap: 0.5rem;
+    color: white;
+    justify-content: center;
+    list-style-type: none;
+}
+
+il {
+    background: aqua;
+    border: 2px solid red;
+}
+
+li:hover {
+    cursor: pointer;
+    color: rgb(131, 80, 80);
+}
