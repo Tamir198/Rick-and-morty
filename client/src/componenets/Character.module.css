@@ -5,25 +5,34 @@
     background: var(--card-color);
     border-radius: 2rem;
     border: 0.4rem black solid;
-    padding: 1rem;
-    justify-content: space-between;
+    padding: 0.5em;
+    justify-content: center;
+    gap: 0.5em;
     margin: 0 auto;
 }
-
 
 .character__container>* {
     color: var(--text-color);
     font-size: 1rem;
 }
 
-.character__container img {
-    border-radius: 50%;
+.character__image {
+    width: 15em;
+    height: 30;
+    margin: 0 auto;
+    text-shadow: 2px 2px;
+    background-image: url('../assets/noImage.jpeg');
+    border-radius: 8%;
+    border: 0.3em white solid;
+}
+
+.character__image:hover {
+    border: 0.3em green solid;
 }
 
 .character__container h1 {
     border-bottom: 2px solid black;
 }
-
 
 @media only screen and (max-width: 800px) {
     .character__container {
