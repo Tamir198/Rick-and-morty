@@ -33,12 +33,9 @@ const AllCharacters = (props) => {
   }
 
   return (
-    <>
-      <div className="title">TODO enter galerry here</div>
       <div className={Styles.grid}>
         {renderCharacters()}
       </div>
-    </>
   )
 }
 

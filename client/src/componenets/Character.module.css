@@ -1,5 +1,5 @@
 .character__container {
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
     background: var(--card-color);
@@ -22,7 +22,7 @@
     margin: 0 auto;
     text-shadow: 2px 2px;
     background-image: url('../assets/noImage.jpeg');
-    border-radius: 8%;
+    border-radius: 4%;
     border: 0.3em white solid;
 }
 
@@ -43,5 +43,6 @@
     }
     .character__image {
         max-width: 20rem;
+        border-radius: 50%;
     }
 }
