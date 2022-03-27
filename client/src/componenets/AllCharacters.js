@@ -7,8 +7,8 @@ import useAxios from '../hooks/useAxios';
 
 const AllCharacters = (props) => {
   const { pageNum } = props;
-  const [charctersData, setCharctersData] = useState([]);
   const { fetchData } = useAxios();
+  const [charctersData, setCharctersData] = useState([]);
 
   useEffect(async () => {
     await fetchData(`allCharacters/${pageNum}`).then(res => {
@@ -27,8 +27,7 @@ const AllCharacters = (props) => {
         item.species,
         item.origin,
         item.image
-      )
-      }>
+      )}>
     </Character>)
   }
 

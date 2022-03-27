@@ -1,8 +1,14 @@
+.footer {
+    display: flex;
+    font-size: 1.5rem;
+    color: white;
+    justify-content: center;
+}
+
 ul {
     display: flex;
-    font-size: 1.2em;
+    gap: 0.5em;
     gap: 0.5rem;
-    color: white;
     justify-content: center;
     list-style-type: none;
 }
@@ -15,4 +21,13 @@ il {
 li:hover {
     cursor: pointer;
     color: rgb(131, 80, 80);
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        font-size: 1em;
+        width: 100%;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
 }
