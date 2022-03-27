@@ -3,17 +3,17 @@ import Character from './Character';
 import CharacterModel from '../models/CharacterModel'
 import Styles from './AllCharacters.module.css'
 
-import axios from 'axios';
+import useAxios from '../hooks/useAxios';
 
 const AllCharacters = (props) => {
   const { pageNum } = props;
   const [charctersData, setCharctersData] = useState([]);
+  const { fetchData } = useAxios();
 
   useEffect(async () => {
-    await axios.get(`http://localhost:4000/allCharacters/${pageNum}`)
-      .then(res => {
-        setCharctersData(res.data.characters);
-      })
+    await fetchData(`allCharacters/${pageNum}`).then(res => {
+      setCharctersData(res.data.characters);
+    });
   }, [pageNum]);
 
   const renderCharacters = () => {
@@ -33,9 +33,9 @@ const AllCharacters = (props) => {
   }
 
   return (
-      <div className={Styles.grid}>
-        {renderCharacters()}
-      </div>
+    <div className={Styles.grid}>
+      {renderCharacters()}
+    </div>
   )
 }
 

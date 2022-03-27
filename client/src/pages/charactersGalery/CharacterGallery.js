@@ -5,16 +5,16 @@ import AllCharacters from '../../componenets/AllCharacters'
 import Styles from './ChracterGalery.module.css'
 
 const CharacterGallery = () => {
-  const [currPage, setCurrPage] = useState('1');
+  const [currPage, setCurrPage] = useState();
   const [pageCount, setPageCount] = useState(42);
 
   const handlePageClick = (event) => {
-    setCurrPage(event.selected)
+    setCurrPage(event.selected +1 );
   };
 
   return (
     <div>
-      <AllCharacters pageNum={currPage} />
+      <AllCharacters pageNum={currPage} />  
       <ReactPaginate className={Styles.test}
          nextLabel="Next"
          previousLabel="Previous"
