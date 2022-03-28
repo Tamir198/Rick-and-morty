@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Character from './Character';
 import CharacterModel from '../models/CharacterModel'
 import Styles from './AllCharacters.module.css'
@@ -10,10 +10,11 @@ const AllCharacters = (props) => {
   const { fetchData } = useAxios();
   const [charctersData, setCharctersData] = useState([]);
 
-  useEffect(async () => {
-    await fetchData(`allCharacters/${pageNum}`).then(res => {
-      setCharctersData(res.data.characters);
-    });
+  useEffect(() => {
+      fetchData(`allCharacters/${pageNum}`).then(res => {
+        setCharctersData(res.data.characters);
+      });
+    
   }, [pageNum]);
 
   const renderCharacters = () => {

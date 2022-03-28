@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ReactPaginate from "https://cdn.skypack.dev/react-paginate@7.1.3";
 import AllCharacters from '../../componenets/AllCharacters'
+import config from '../../confige.json'
 
-import Styles from './ChracterGalery.module.css'
+import styles from './ChracterGalery.module.css'
 
 const CharacterGallery = () => {
-  const [currPage, setCurrPage] = useState(1);
-  const [pageCount, setPageCount] = useState(42);
+  const [currPage, setCurrPage] = useState(config.StartingPageNum);
+  const pageCount = config.pageCount;
 
   const handlePageClick = (event) => {
     setCurrPage(event.selected + 1);
@@ -15,16 +16,16 @@ const CharacterGallery = () => {
   return (
     <div>
       <AllCharacters pageNum={currPage} />
-      <div className={Styles.footer}>
+      <div className={styles.footer}>
         <p>Page {currPage} / {pageCount}</p>
-        <ReactPaginate className={Styles.test}
+        <ReactPaginate className={styles.test}
           nextLabel="Next"
           previousLabel="Previous"
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          marginPagesDisplayed={3}
+          pageRangeDisplayed={config.pageRangeDisplayed}
+          marginPagesDisplayed={config.marginPagesDisplayed}
           pageCount={pageCount}
-          breakClassName={Styles.test}
+          breakClassName={styles.test}
           breakLabel="..."
         />
       </div>

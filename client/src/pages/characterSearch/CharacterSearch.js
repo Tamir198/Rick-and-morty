@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-import Styles from './characterSearch.module.css'
 import Character from '../../componenets/Character';
 import CharacterModel from '../../models/CharacterModel';
 
 import useAxios from '../../hooks/useAxios';
+import styles from './characterSearch.module.css'
 
 const CharacterSearch = () => {
 
@@ -24,7 +24,7 @@ const CharacterSearch = () => {
   return (
     <div>
       <h1 className="centered-text title">Enter A number - get a character</h1>
-      <div className={Styles.searchBar__container}>
+      <div className={styles.searchBar__container}>
         <input type="number" placeholder="1-800" min="1" max="800" ref={inputRef} />
         <button type="submit" onClick={getCharacterById}>Enter</button>
       </div>

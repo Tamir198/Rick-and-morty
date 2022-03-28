@@ -1,4 +1,3 @@
-import React from 'react'
 import Styles from './Character.module.css'
 
  const Character = (props) => {
