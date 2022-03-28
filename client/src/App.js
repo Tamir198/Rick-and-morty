@@ -6,8 +6,8 @@ function App() {
     <div>
       <button>Rick and mory app</button>
       <SideNav></SideNav>
-      <nav>
-        <NavLink to="/allcharacters">All characters</NavLink> |{" "}
+      <nav style={{ display: 'flex', gap: '.5rem' }}>
+        <NavLink to="/allcharacters">All characters</NavLink> 
         <NavLink to="/singleChatacter">Single character</NavLink>
       </nav>
       <Outlet/>

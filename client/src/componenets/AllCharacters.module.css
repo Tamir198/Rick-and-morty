@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.grid img {
+    width: 80%;
+}
+
+.grid> {
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        width: 75%;
+        margin: auto;
+    }
+}
