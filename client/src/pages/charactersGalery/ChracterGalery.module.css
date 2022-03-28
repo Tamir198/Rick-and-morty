@@ -8,7 +8,6 @@
 ul {
     display: flex;
     gap: 0.5em;
-    gap: 0.5rem;
     justify-content: center;
     list-style: none;
 }
