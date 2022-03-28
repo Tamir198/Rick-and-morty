@@ -15,7 +15,7 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route path="allcharacters" element={<CharacterGallery/>} />
           <Route path="singleChatacter" element={<CharacterSearch/>} />
-        <Route path="*" element={<PageNotFound/>} ></Route>
+        <Route path="*" element={<PageNotFound/>} />
         </Route>
       </Routes>   
     </BrowserRouter>

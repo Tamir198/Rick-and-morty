@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Character from './Character';
 import CharacterModel from '../models/CharacterModel'
-import Styles from './AllCharacters.module.css'
+import styles from './AllCharacters.module.css'
 
 import useAxios from '../hooks/useAxios';
 
@@ -19,7 +19,7 @@ const AllCharacters = (props) => {
   const renderCharacters = () => {
     return charctersData.map(item => <Character
       key={item.id}
-      className={`${Styles.grid__item} ${Styles.character__grid}`}
+      className={`${styles.grid__item} ${styles.character__grid}`}
       character={new CharacterModel(
         item.name,
         item.id,
@@ -32,7 +32,7 @@ const AllCharacters = (props) => {
   }
 
   return (
-    <div className={Styles.grid}>
+    <div className={styles.grid}>
       {renderCharacters()}
     </div>
   )

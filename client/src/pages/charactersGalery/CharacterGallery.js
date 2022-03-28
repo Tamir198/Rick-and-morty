@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ReactPaginate from "https://cdn.skypack.dev/react-paginate@7.1.3";
 import AllCharacters from '../../componenets/AllCharacters'
 

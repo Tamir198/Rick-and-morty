@@ -5,7 +5,7 @@
     background: var(--card-color);
     border-radius: 2rem;
     border: 0.4rem black solid;
-    padding: 0.5em;
+    padding: 0.5rem;
     justify-content: center;
     gap: 0.5em;
     margin: 0 auto;
@@ -17,17 +17,17 @@
 }
 
 .character__image {
-    width: 15em;
+    width: 15rem;
     height: 30;
     margin: 0 auto;
     text-shadow: 2px 2px;
     background-image: url('../assets/noImage.jpeg');
     border-radius: 4%;
-    border: 0.3em white solid;
+    border: 0.3rem white solid;
 }
 
 .character__image:hover {
-    border: 0.3em green solid;
+    border: 0.3rem green solid;
 }
 
 .character__container h1 {
@@ -39,7 +39,7 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-        width: 80%;
+        width: 90%;
     }
     .character__image {
         max-width: 20rem;
