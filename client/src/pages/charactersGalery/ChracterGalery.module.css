@@ -10,7 +10,7 @@ ul {
     gap: 0.5em;
     gap: 0.5rem;
     justify-content: center;
-    list-style-type: none;
+    list-style: none;
 }
 
 il {
@@ -25,7 +25,7 @@ li:hover {
 
 @media only screen and (max-width: 600px) {
     .footer {
-        font-size: 1em;
+        font-size: 1rem;
         width: 100%;
         flex-direction: column-reverse;
         text-align: center;

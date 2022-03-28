@@ -39,7 +39,7 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-        width: 80%;
+        width: 90%;
     }
     .character__image {
         max-width: 20rem;
