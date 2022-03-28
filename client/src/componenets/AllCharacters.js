@@ -11,10 +11,10 @@ const AllCharacters = (props) => {
   const [charctersData, setCharctersData] = useState([]);
 
   useEffect(() => {
-      fetchData(`allCharacters/${pageNum}`).then(res => {
-        setCharctersData(res.data.characters);
-      });
-    
+    fetchData(`allCharacters/${pageNum}`).then(res => {
+      setCharctersData(res.data.characters);
+    });
+
   }, [pageNum]);
 
   const renderCharacters = () => {

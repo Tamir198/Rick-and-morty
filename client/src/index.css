@@ -3,6 +3,7 @@
     --card-border-color: rgb(140, 130, 115);
     --card-color: rgb(48, 52, 54);
     --text-color: #e8e6e3;
+    --li-hover-color: #2de975;
 }
 
 body {
@@ -15,4 +16,12 @@ body {
 
 .title {
     color: var(--text-color);
+}
+
+.nav__item {
+    display: 'flex';
+    align-items: center;
+    width: fit-content;
+    background: var(--text-color);
+    margin: 1rem;
 }

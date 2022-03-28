@@ -1,14 +1,16 @@
 import { Outlet, NavLink } from "react-router-dom";
 
+import '../src/index.css'
+
 function App() {
   return (
     <div>
       <button>Rick and mory app</button>
-      <nav style={{ display: 'flex', gap: '.5rem' }}>
-        <NavLink to="/allcharacters">All characters</NavLink> 
-        <NavLink to="/singleChatacter">Single character</NavLink>
+      <nav className="nav__item">
+        <NavLink  to="/allcharacters">All characters</NavLink>
+        <NavLink  to="/singleChatacter">Single character</NavLink>
       </nav>
-      <Outlet/>
+      <Outlet />
     </div>
   )
 }

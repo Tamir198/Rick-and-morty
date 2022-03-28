@@ -6,7 +6,7 @@ const useAxios = () => {
 
   const fetchData = async (url) => {
     const res = await axios.get(url);
-    if(res.status !== 200) return 'Error';
+    if (res.status !== 200) return 'Error';
     return res;
   };
 

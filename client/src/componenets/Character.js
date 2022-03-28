@@ -1,7 +1,7 @@
 import Styles from './Character.module.css'
 
- const Character = (props) => {
-  const {name, id, status, species, origin, image} = props.character;
+const Character = (props) => {
+  const { name, id, status, species, origin, image } = props.character;
 
   return (
     <div className={Styles.character__container}>

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CharacterSearch from  './pages/characterSearch/CharacterSearch'
+import CharacterSearch from './pages/characterSearch/CharacterSearch'
 import PageNotFound from './pages/PageNotFound';
 import CharacterGallery from './pages/charactersGalery/CharacterGallery';
 import './index.css';
@@ -12,11 +12,11 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="allcharacters" element={<CharacterGallery/>} />
-          <Route path="singleChatacter" element={<CharacterSearch/>} />
-        <Route path="*" element={<PageNotFound/>} />
+          <Route path="allcharacters" element={<CharacterGallery />} />
+          <Route path="singleChatacter" element={<CharacterSearch />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
-      </Routes>   
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

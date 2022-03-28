@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 
 import Character from '../../componenets/Character';
 import CharacterModel from '../../models/CharacterModel';
@@ -15,8 +15,9 @@ const CharacterSearch = () => {
   const getCharacterById = async () => {
     const pageNumber = inputRef.current.value;
     if (pageNumber > 800) return;
+
     await fetchData(`singleCharacter/${pageNumber}`).then(res => {
-        setCharcterData(res.data)
+      setCharcterData(res.data);
     }
     )
   }
