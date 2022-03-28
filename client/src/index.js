@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CharacterSearch from './pages/characterSearch/CharacterSearch';
+import CharacterSearch from  './pages/characterSearch/CharacterSearch'
 import PageNotFound from './pages/PageNotFound';
 import CharacterGallery from './pages/charactersGalery/CharacterGallery';
 import './index.css';
