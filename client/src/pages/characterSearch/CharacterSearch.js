@@ -24,7 +24,7 @@ const CharacterSearch = () => {
 
   return (
     <div>
-      <h1 className="centered-text title">Enter A number - get a character</h1>
+      <h1 className="title--green centered-text title">Enter A number - get a character</h1>
       <div className={styles.searchBar__container}>
         <input type="number" placeholder="1-800" min="1" max="800" ref={inputRef} />
         <button type="submit" onClick={getCharacterById}>Enter</button>

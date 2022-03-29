@@ -7,8 +7,9 @@ function App() {
     <div>
       <button>Rick and mory app</button>
       <nav className="nav__item">
-        <NavLink  to="/allcharacters">All characters</NavLink>
-        <NavLink  to="/singleChatacter">Single character</NavLink>
+        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/allcharacters">All characters</NavLink>
+        <NavLink to="/singleChatacter">Single character</NavLink>
       </nav>
       <Outlet />
     </div>
