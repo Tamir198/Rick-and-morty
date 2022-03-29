@@ -30,8 +30,9 @@
     border: 0.3rem green solid;
 }
 
-.character__container h1 {
+.title {
     border-bottom: 2px solid black;
+    font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 800px) {
