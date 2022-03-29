@@ -1,13 +1,17 @@
+@import url('https://fonts.google.com/specimen/Josefin+Sans');
 :root {
     --dark-grey-background: #24282f;
     --card-border-color: rgb(140, 130, 115);
     --card-color: rgb(48, 52, 54);
     --text-color: #e8e6e3;
     --li-hover-color: #2de975;
+    --green-title-color: yellowgreen;
 }
 
 body {
     background: var(--dark-grey-background);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
 
 .centered-text {
@@ -16,6 +20,14 @@ body {
 
 .title {
     color: var(--text-color);
+}
+
+.title--green {
+    background-color: var(--green-title-color);
+}
+
+.title--details {
+    font-size: 2rem;
 }
 
 .nav__item {
