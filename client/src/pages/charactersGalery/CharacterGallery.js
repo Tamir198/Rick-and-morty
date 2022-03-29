@@ -17,15 +17,14 @@ const CharacterGallery = () => {
     <div>
       <AllCharacters pageNum={currPage} />
       <div className={styles.footer}>
-        <p>Page {currPage} / {pageCount}</p>
-        <ReactPaginate className={styles.test}
-          nextLabel="Next"
-          previousLabel="Previous"
+        <p className={styles.currentPage} >Page {currPage} / {pageCount}</p>
+        <ReactPaginate 
+          nextLabel=">"
+          previousLabel="<"
           onPageChange={handlePageClick}
           pageRangeDisplayed={config.pageRangeDisplayed}
           marginPagesDisplayed={config.marginPagesDisplayed}
           pageCount={pageCount}
-          breakClassName={styles.test}
           breakLabel="..."
         />
       </div>

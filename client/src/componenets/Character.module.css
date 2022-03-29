@@ -12,7 +12,7 @@
 }
 
 .character__container>* {
-    color: var(--text-color);
+    color: var(--wheat-color);
     font-size: 1rem;
 }
 
@@ -27,11 +27,11 @@
 }
 
 .character__image:hover {
-    border: 0.3rem green solid;
+    border: 0.3rem var(--wheat-color) solid;
 }
 
 .title {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     font-size: 1.5rem;
 }
 

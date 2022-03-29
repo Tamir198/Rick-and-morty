@@ -5,7 +5,6 @@ import '../src/index.css'
 function App() {
   return (
     <div>
-      <button>Rick and mory app</button>
       <nav className="nav__item">
         <NavLink to="/home">Home</NavLink>
         <NavLink to="/allcharacters">All characters</NavLink>

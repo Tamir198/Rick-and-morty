@@ -6,9 +6,12 @@
     --text-color: #e8e6e3;
     --li-hover-color: #2de975;
     --green-title-color: yellowgreen;
+    --wheat-color: wheat;
 }
 
 body {
+    width: fit-content;
+    margin: auto;
     background: var(--dark-grey-background);
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
@@ -31,9 +34,35 @@ body {
 }
 
 .nav__item {
-    display: 'flex';
-    align-items: center;
+    margin: 2rem auto 2rem auto;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-content: center;
     width: fit-content;
-    background: var(--text-color);
-    margin: 1rem;
+}
+
+a,
+.nav__item>* {
+    text-decoration: none;
+    font-size: 2.2rem;
+    border-radius: 10%;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-color: var( --card-color);
+    color: var(--wheat-color);
+}
+
+.nav__item>* {
+    border: 0.3rem solid;
+    height: 1.2rem;
+}
+
+.nav__item>*:hover {
+    background-color: var(--card-border-color);
+}
+
+@media screen and (max-width: 992px) {
+    .nav__item>* {
+        font-size: 1.2rem;
+    }
 }
