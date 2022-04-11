@@ -1,15 +1,9 @@
 import axios from "axios";
 
-axios.defaults.baseURL = 'http://localhost:4000/';
+import axiosService from '../services/axiosService';
 
 const useAxios = () => {
-
-  const fetchData = async (url) => {
-    const res = await axios.get(url);
-    if (res.status !== 200) return 'Error';
-    return res;
-  };
-
+  const fetchData = axiosService.fetchData;
   return { fetchData };
 }
 
