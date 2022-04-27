@@ -1,7 +1,7 @@
-const singleCharacter = () => {
+const SingleCharacter = () => {
   return (
-    <div>singleCharacter</div>
+    <div>Single Character</div>
   )
 }
 
-export default singleCharacter
+export default SingleCharacter
