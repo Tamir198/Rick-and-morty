@@ -15,7 +15,6 @@ const AllCharacters = (props) => {
     fetchData(`allCharacters/${pageNum}`).then(res => {
       setCharctersData(res.data.characters);
     });
-
   }, [pageNum]);
 
   const renderCharacters = () => {
