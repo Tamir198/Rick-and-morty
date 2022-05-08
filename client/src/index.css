@@ -34,11 +34,13 @@ body {
 }
 
 .nav__item {
+    display: flex;
     margin: 2rem auto 2rem auto;
     font-size: 1.5rem;
     justify-content: center;
     align-content: center;
     width: fit-content;
+    height: fit-content;
 }
 
 a,

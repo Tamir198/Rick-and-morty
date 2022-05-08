@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ReactPaginate from "https://cdn.skypack.dev/react-paginate@7.1.3";
-import AllCharacters from '../../componenets/AllCharacters'
+import AllCharacters from '../../componenets/allCharacters/AllCharacters.js'
 import config from '../../confige.json'
 
 import styles from './ChracterGalery.module.css'

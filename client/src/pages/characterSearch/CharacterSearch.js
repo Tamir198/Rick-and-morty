@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 
-import Character from '../../componenets/Character';
+import Character from '../../componenets/character/Character.js';
 import CharacterModel from '../../models/CharacterModel';
 import useAxios from '../../hooks/useAxios';
 

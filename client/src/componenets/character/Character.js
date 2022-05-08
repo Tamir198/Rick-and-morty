@@ -4,7 +4,7 @@ const Character = (props) => {
   const { name, id, status, species, origin, image } = props.character;
 
   return (
-    <div className={styles.character__container}>
+    <div className={styles.character__container} data-testid="character">
       <div>
         <p className={styles.title}>{name}</p>
         <h2>Character number {id}</h2>
