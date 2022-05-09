@@ -1,7 +1,7 @@
-const allcharacters = () => {
+const Allcharacters = () => {
   return (
-    <div>allcharacters</div>
+    <div>Allcharacters</div>
   )
 }
 
-export default allcharacters
+export default Allcharacters
