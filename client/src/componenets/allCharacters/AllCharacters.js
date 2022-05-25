@@ -1,22 +1,14 @@
-import { useEffect, useState } from 'react'
-
 import Character from '../character/Character';
 import CharacterModel from '../../models/CharacterModel'
 import styles from './AllCharacters.module.css'
 
-import useAxios from '../../hooks/useAxios';
+import useHandleCharactersData from '../../hooks/useHandleCharactersData';
 
 const AllCharacters = (props) => {
   const { pageNum } = props;
-  const { fetchData } = useAxios();
-  const [charctersData, setCharctersData] = useState([]);
-
-  useEffect(() => {
-    fetchData(`allCharacters/${pageNum}`).then(res => {
-      setCharctersData(res.data.characters);
-    });
-  }, [pageNum]);
-
+  
+  const charctersData = useHandleCharactersData(pageNum);
+    
   const renderCharacters = () => {
     return charctersData.map(item => <Character
       key={item.id}
