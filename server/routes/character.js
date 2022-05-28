@@ -1,9 +1,9 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+const router = Router();
 
-const characterController = require("../controllers/characterController");
+import { getSingleCharacter, getAllCharacters } from '../controllers/characterController.js';
 
-router.get("/singleCharacter/:id", characterController.getSingleCharacter);
-router.get("/allCharacters/:pageNumber", characterController.getAllCharacters);
+router.get("/singleCharacter/:id", getSingleCharacter);
+router.get("/allCharacters/:pageNumber", getAllCharacters);
 
-module.exports = router;
+export default router;

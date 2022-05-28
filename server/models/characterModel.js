@@ -1,4 +1,4 @@
-module.exports = class Character {
+export default class Character {
 
     constructor(id, name, status, species, origin, location, image) {
         this.id = id;
