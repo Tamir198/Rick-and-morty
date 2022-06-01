@@ -1,14 +1,14 @@
-const express = require('express');
-var cors = require('cors');
+import express from 'express';
+import cors from 'cors';
+
+import port from "./confige.js";
+import characterRoutes from "./routes/character.js";
+
 const app = express();
-
 app.use(cors())
-
-const confige = require("./confige.json")
-const characterRoutes = require("./routes/character");
 
 app.use(characterRoutes);
 
-app.listen(confige.port, () => {
-    console.log(`Listening on port ${confige.port}`);
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
 })

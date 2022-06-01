@@ -1,4 +1,4 @@
-module.exports = class allCharactersModel {
+export default class allCharactersModel {
 
     constructor(currentPageNumber, nextPageNumber, characters) {
         this.currentPageNumber = currentPageNumber;

@@ -1,11 +1,11 @@
-const characterApi = require("../api/characterApi");
+import {getCharacterById,getCharacters} from '../api/characterApi.js'
 
-exports.getSingleCharacter = async(req, res) => {
-    const character = await characterApi.getCharacterById(req.params.id);
+export async function getSingleCharacter(req, res) {
+    const character = await getCharacterById(req.params.id);
     res.send(character);
 }
 
-exports.getAllCharacters = async(req, res) => {
-    const allCharacters = await characterApi.getAllCharacters(req.params.pageNumber);
+export async function getAllCharacters(req, res) {
+    const allCharacters = await getCharacters(req.params.pageNumber);
     res.send(allCharacters);
 }
