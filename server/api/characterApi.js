@@ -1,10 +1,11 @@
-import get from "axios";
+import axiosService from "../services/axiosService.js";
+
 import allCharactersModel from "../models/allCharactersModel.js"
 import characterModel from "../models/characterModel.js";
 
 async function getCharacterById(id) {
 
-  return await get(`https://rickandmortyapi.com/api/character/${id}`)
+  return await axiosService.fetchData(`api/character/${id}`)
     .then(res => {
       return new characterModel(
         id,
@@ -19,9 +20,10 @@ async function getCharacterById(id) {
 }
 
 async function getCharacters(pageNumber) {
-  const url = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+  const url = `api/character/?page=${pageNumber}`;
 
-  return await get(url).then(res => {
+  return await axiosService.fetchData(url)
+  .then(res => {
     const characters = [];
 
     res.data.results.forEach(element => {
