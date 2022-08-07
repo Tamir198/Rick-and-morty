@@ -1,4 +1,4 @@
-import axiosService from "../services/axiosService.js";
+import {axiosService} from "../services/axiosService.js";
 
 import allCharactersModel from "../models/allCharactersModel.js"
 import characterModel from "../models/characterModel.js";
@@ -9,7 +9,7 @@ async function getCharacterById(id) {
     .then(res => {
       return new characterModel(
         id,
-        res.data.name,
+        res.data.name,   
         res.data.status,
         res.data.species,
         res.data.origin.name,
