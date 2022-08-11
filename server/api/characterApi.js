@@ -2,9 +2,12 @@ import axiosService from "../services/axiosService.js";
 import allCharactersModel from "../models/allCharactersModel.js"
 import characterModel from "../models/characterModel.js";
 
-async function getCharacterById(id) {
+class characterApi{
 
-  return await axiosService.fetchData(`api/character/${id}`)
+  
+  static async getCharacterById(id) {
+    
+    return await axiosService.fetchData(`api/character/${id}`)
     .then(res => {
       return new characterModel(
         id,
@@ -14,17 +17,17 @@ async function getCharacterById(id) {
         res.data.origin.name,
         res.data.location.name,
         res.data.image
-      );
-    });
-}
-
-async function getCharacters(pageNumber) {
-  const url = `api/character/?page=${pageNumber}`;
-
-  return await axiosService.fetchData(url)
-  .then(res => {
+        );
+      });
+    }
+    
+    static async getCharacters(pageNumber) {
+      const url = `api/character/?page=${pageNumber}`;
+      
+      return await axiosService.fetchData(url)
+      .then(res => {
     const characters = [];
-
+    
     res.data.results.forEach(element => {
       characters.push(new characterModel(
         element.id, element.name,
@@ -37,10 +40,11 @@ async function getCharacters(pageNumber) {
     });
     return new allCharactersModel(
       pageNumber, +pageNumber + 1, characters
-    );
-  });
-
+      );
+    });
+    
+  }
 }
-
-
-export {getCharacterById, getCharacters}
+  
+  
+  export default characterApi;
