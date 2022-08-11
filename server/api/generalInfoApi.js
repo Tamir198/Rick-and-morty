@@ -1,6 +1,6 @@
 
 import generalInfo from "../models/generalInfoModel.js";
-import { axiosService } from "../services/axiosService.js";
+import axiosService  from "../services/axiosService.js";
 
 const getCharactersCount = (arr) => {
   const res = [];

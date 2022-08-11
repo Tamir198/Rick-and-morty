@@ -1,5 +1,4 @@
-import {axiosService} from "../services/axiosService.js";
-
+import axiosService from "../services/axiosService.js";
 import allCharactersModel from "../models/allCharactersModel.js"
 import characterModel from "../models/characterModel.js";
 

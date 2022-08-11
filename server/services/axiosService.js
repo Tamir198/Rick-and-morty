@@ -21,4 +21,4 @@ const axiosService = {
   }
 }
 
-export { axiosService };
+export default axiosService;
