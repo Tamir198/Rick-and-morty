@@ -8,6 +8,7 @@ import CharacterGallery from './pages/charactersGalery/CharacterGallery';
 import HomePage from './pages/homePage/HomePage';
 
 import { Provider } from "react-redux";
+import { URLS } from 'constants/url';
 import charactersStore from './redux/charactersStore';
 
 import './index.css';
@@ -18,9 +19,9 @@ ReactDOM.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path='home' element={<HomePage />} />
-            <Route path="allcharacters" element={<CharacterGallery />} />
-            <Route path="singleChatacter" element={<CharacterSearch />} />
+            <Route path={URLS.HOME} element={<HomePage />} />
+            <Route path={URLS.ALL_CHARACTERS} element={<CharacterGallery />} />
+            <Route path={URLS.SINGLE_CHARACTER} element={<CharacterSearch />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
