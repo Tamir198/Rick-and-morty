@@ -1,8 +1,8 @@
 import { Outlet, NavLink } from "react-router-dom";
 
-import HomeRout from './routes/Home'
-import AllcharactersRout from './routes/Allcharacters'
-import SingleCharacterRout from './routes/SingleCharacter'
+import HomeRout from './routes/home'
+import AllcharactersRout from './routes/allcharacters'
+import SingleCharacterRout from './routes/singleCharacter'
 
 import '../src/index.css'
 
