@@ -1,11 +1,17 @@
 import express from 'express';
 import cors from 'cors';
-
+import mongoose from 'mongoose';
+import 'dotenv/config'
 import characterRoutes from "./routes/character.js";
 import generalInfoRoutes from "./routes/generalInfo.js";
 
 const loadExtensions = async function (app) {
   app.use(cors());
+  try {
+    mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+  } catch (error) {
+    console.log('Error connecting to Mongo')
+  }
 }
 
 const loadRoutes = function (app) {
@@ -13,14 +19,14 @@ const loadRoutes = function (app) {
   app.use(generalInfoRoutes);
 }
 
-const creatApp = () =>{
+const creatApp = () => {
   const app = express();
 
   loadRoutes(app);
   loadExtensions(app);
 
   return app;
-  
+
 }
 
 
