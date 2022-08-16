@@ -12,7 +12,7 @@ export const HomeMainContent = () => {
      setgeneralData({ ricksIfno: data.ricksIfno, mortysInfo: data.mortysInfo })
   }
   useEffect(() => {
-    //TODO - check where i should use 
+    //TODO - check where i should use the loading state from use query
     getGeneralInfo();
   }, [])
 

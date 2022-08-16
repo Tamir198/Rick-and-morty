@@ -1,9 +1,9 @@
 import { rest } from 'msw';
 import { getSingleCharacter } from './controllers/singleCharater';
 import { getAllCharaters } from './controllers/allCharaters';
+import { SERVER } from 'constants/url';
 
-//TODO change this to constant confige files 
-const baseAdress = 'http://localhost:4000';
+const baseAdress = SERVER.BASE_URL;
 
 //TODO make this more generic - one handlers array per feature
 export const handlers = [

@@ -19,7 +19,6 @@ const useHandleCharactersData = (pageNum) => {
   const dispatch = useDispatch();
 
   const [charctersData, setCharctersData] = useState([]);
-  const { fetchData } = useAxios();
 
   useEffect(() => {
     const data = characters.find(character => character.pageNum === pageNum);

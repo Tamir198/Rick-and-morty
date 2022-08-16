@@ -2,7 +2,6 @@ import { useRef, useState } from 'react'
 
 import Character from '../../componenets/character/Character.js';
 import CharacterModel from '../../models/CharacterModel';
-import useAxios from '../../hooks/useAxios';
 
 import styles from './characterSearch.module.css'
 import { CharacterService } from 'services/characterService.js';
@@ -11,12 +10,10 @@ const CharacterSearch = () => {
 
   const inputRef = useRef();
   const [charcterData, setCharcterData] = useState();
-  const { fetchData } = useAxios();
 
   const getCharacterById = async () => {
     const characterId = inputRef.current.value;
     if (characterId > 800) return;
-
 
     await CharacterService.getById(characterId).then(res => {
       setCharcterData(res.data);

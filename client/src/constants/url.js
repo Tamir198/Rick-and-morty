@@ -13,3 +13,7 @@ export const apiUrl = ({ pageNum=1, id=1 }) => ({
     getAll: '/generalInfo'
   }
 })
+
+export const SERVER = {
+  BASE_URL: "http://localhost:4000"
+}
