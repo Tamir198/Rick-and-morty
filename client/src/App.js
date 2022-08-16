@@ -5,6 +5,7 @@ import AllcharactersRout from 'routes/allcharacters'
 import SingleCharacterRout from 'routes/singleCharacter'
 import { URLS } from "constants/url";
 
+
 import 'index.css'
 
 function App() {

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 
 import Character from '../../componenets/character/Character.js';
 import CharacterModel from '../../models/CharacterModel';
@@ -8,12 +8,17 @@ import { CharacterService } from 'services/characterService.js';
 
 const CharacterSearch = () => {
 
-  const inputRef = useRef();
+  let pageNumber = 0
   const [charcterData, setCharcterData] = useState();
+
+  const setPageNumber = (event) =>{
+    pageNumber = event.target.value;
+  }
 
   const getCharacterById = async () => {
     const characterId = inputRef.current.value;
     if (characterId > 800) return;
+
 
     await CharacterService.getById(characterId).then(res => {
       setCharcterData(res.data);
@@ -25,7 +30,7 @@ const CharacterSearch = () => {
     <div>
       <h1 className="title--green centered-text">Enter A number - get a character</h1>
       <div className={styles.searchBar__container}>
-        <input type="number" placeholder="1-800" min="1" max="800" ref={inputRef} />
+        <input type="number" onChange={(e) => setPageNumber(e)} placeholder="1-800" min="1" max="800"/>
         <button type="submit" onClick={getCharacterById}>Enter</button>
       </div>
 
