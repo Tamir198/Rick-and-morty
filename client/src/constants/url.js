@@ -4,12 +4,12 @@ export const URLS = {
   ALL_CHARACTERS: "allcharacters"
 }
 
-export const apiUrl = ({ pageNum, characterId }) => ({
+export const apiUrl = ({ pageNum=1, id=1 }) => ({
   characters: {
     getAll: `/allCharacters/${pageNum}`,
-    getById: `/singleCharacter/${characterId}`
+    getById: `/singleCharacter/${id}`
   },
   generalIfno: {
-    getGenerallInfo: '/generalInfo'
+    getAll: '/generalInfo'
   }
 })
