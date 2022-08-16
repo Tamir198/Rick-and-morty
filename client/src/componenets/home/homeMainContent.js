@@ -1,19 +1,19 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import useAxios from '../../hooks/useAxios'
 import homePageGif from 'assets/homeGif.gif'
 import styles from './homeStyle.module.css'
+import { GeneralInfoServie} from 'services/generalInfoService'
 
 export const HomeMainContent = () => {
   const [generalData, setgeneralData] = useState();
-  const { fetchData } = useAxios();
 
+  const getGeneralInfo = async () => {
+     let {data} = await GeneralInfoServie.getAll();
+     setgeneralData({ ricksIfno: data.ricksIfno, mortysInfo: data.mortysInfo })
+  }
   useEffect(() => {
-    fetchData(`/generalInfo`)
-      .then(res => res.data)
-      .then(res => {
-        setgeneralData({ ricksIfno: res.ricksIfno, mortysInfo: res.mortysInfo })
-      })
+    //TODO - check where i should use 
+    getGeneralInfo();
   }, [])
 
 
