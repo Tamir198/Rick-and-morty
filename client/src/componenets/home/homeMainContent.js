@@ -10,7 +10,7 @@ export const HomeMainContent = () => {
 
   useEffect(() => {
     fetchData(`/generalInfo`)
-      .then(res => res.data.x)
+      .then(res => res.data)
       .then(res => {
         setgeneralData({ ricksIfno: res.ricksIfno, mortysInfo: res.mortysInfo })
       })
