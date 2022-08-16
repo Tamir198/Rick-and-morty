@@ -1,16 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-
 import confige from "./confige.js";
-import characterRoutes from "./routes/character.js";
-import generalInfoRoutes from "./routes/generalInfo.js";
 
+import createApp from './app.js'
 
-const app = express();
-app.use(cors())
-
-app.use(characterRoutes);
-app.use(generalInfoRoutes);
+const app = createApp();
 
 app.listen(confige.port, () => {
     console.log(`Listening on port ${confige.port}`);

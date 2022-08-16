@@ -2,24 +2,25 @@ import { useState } from 'react'
 
 import Character from '../../componenets/character/Character.js';
 import CharacterModel from '../../models/CharacterModel';
-import useAxios from '../../hooks/useAxios';
 
 import styles from './characterSearch.module.css'
+import { CharacterService } from 'services/characterService.js';
 
 const CharacterSearch = () => {
 
   let pageNumber = 0
   const [charcterData, setCharcterData] = useState();
-  const { fetchData } = useAxios();
 
   const setPageNumber = (event) =>{
     pageNumber = event.target.value;
   }
 
   const getCharacterById = async () => {
-    if (pageNumber > 800) return;
+    const characterId = inputRef.current.value;
+    if (characterId > 800) return;
 
-    await fetchData(`singleCharacter/${pageNumber}`).then(res => {
+
+    await CharacterService.getById(characterId).then(res => {
       setCharcterData(res.data);
     }
     )
