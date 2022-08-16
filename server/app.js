@@ -21,9 +21,9 @@ const loadRoutes = function (app) {
 
 const creatApp = () => {
   const app = express();
-
-  loadRoutes(app);
+  // app.use(cors());
   loadExtensions(app);
+  loadRoutes(app);
 
   return app;
 

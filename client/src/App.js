@@ -1,11 +1,11 @@
 import { Outlet, NavLink } from "react-router-dom";
 
-import HomeRout from './routes/home'
-import AllcharactersRout from './routes/allcharacters'
-import SingleCharacterRout from './routes/singleCharacter'
+import HomeRout from 'routes/home'
+import AllcharactersRout from 'routes/allcharacters'
+import SingleCharacterRout from 'routes/singleCharacter'
 import { URLS } from "constants/url";
 
-import '../src/index.css'
+import 'index.css'
 
 function App() {
   return (
