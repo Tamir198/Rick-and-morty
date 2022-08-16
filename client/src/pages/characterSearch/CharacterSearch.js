@@ -16,7 +16,7 @@ const CharacterSearch = () => {
   }
 
   const getCharacterById = async () => {
-    const characterId = inputRef.current.value;
+    const characterId = pageNumber;
     if (characterId > 800) return;
 
 
