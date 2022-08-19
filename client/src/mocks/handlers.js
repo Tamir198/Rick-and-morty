@@ -1,6 +1,6 @@
 import { rest } from 'msw';
-import { getSingleCharacter } from './controllers/singleCharater';
-import { getAllCharaters } from './controllers/allCharaters';
+import { getSingleCharacter } from 'mocks/controllers/singleCharater';
+import { getAllCharaters } from 'mocks/controllers/allCharaters';
 import { SERVER } from 'constants/url';
 
 const baseAdress = SERVER.BASE_URL;

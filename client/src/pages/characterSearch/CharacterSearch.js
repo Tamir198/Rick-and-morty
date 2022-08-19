@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import Character from '../../componenets/character/Character.js';
-import CharacterModel from '../../models/CharacterModel';
+import Character from 'componenets/character/Character.js';
+import CharacterModel from 'models/CharacterModel';
 
-import styles from './characterSearch.module.css'
+import styles from 'pages/characterSearch/characterSearch.module.css'
 import { CharacterService } from 'services/characterService.js';
 
 const CharacterSearch = () => {

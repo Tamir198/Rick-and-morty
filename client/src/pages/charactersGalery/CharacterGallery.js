@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import ReactPaginate from "https://cdn.skypack.dev/react-paginate@7.1.3";
-import AllCharacters from '../../componenets/allCharacters/AllCharacters.js'
-import config from '../../confige.json'
+import AllCharacters from 'componenets/allCharacters/AllCharacters.js'
+import config from 'confige.json'
 
-import styles from './ChracterGalery.module.css'
+import styles from 'pages/charactersGalery/ChracterGalery.module.css'
 
 const CharacterGallery = () => {
   const [currPage, setCurrPage] = useState(config.StartingPageNum);

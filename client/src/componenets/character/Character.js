@@ -1,4 +1,4 @@
-import styles from './Character.module.css'
+import styles from 'componenets/character/Character.module.css'
 
 const Character = (props) => {
   const { name, id, status, species, origin, image } = props.character;

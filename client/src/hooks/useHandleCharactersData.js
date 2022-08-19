@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import { addCharactersPage } from '../redux/reducers/charactersSlice'
+import { addCharactersPage } from 'redux/reducers/charactersSlice'
 import { CharacterService } from 'services/characterService'
 
-import useAxios from './useAxios';
 
 /** 
     * Returns the current characters page data 
