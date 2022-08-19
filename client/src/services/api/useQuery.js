@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 //uswQuery immidiate imvoke the api
 export const useQuery = (fetchAction, { onSuccess, onError, wait, refetchInterval } = {}) => {
@@ -11,11 +11,13 @@ export const useQuery = (fetchAction, { onSuccess, onError, wait, refetchInterva
 
 
   const fetchActionData = useCallback(async () => {
+
     const { data } = await fetchAction();
 
     if (onSuccess) {
       onSuccess(data);
     }
+
     setDataState(data);
     setIsSuccess(true);
 
@@ -47,7 +49,9 @@ export const useQuery = (fetchAction, { onSuccess, onError, wait, refetchInterva
 
   //Query will be called in non silence mode for the first time
   useEffect(() => {
+    console.log('Waiting')
     if (!wait) {
+      console.log('Not waiting')
       fetchData();
     }
   }, [wait]);
