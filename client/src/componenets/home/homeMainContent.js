@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import homePageGif from 'assets/homeGif.gif'
+import homePageGif from 'assets/homeGif.gif' 
 import styles from 'componenets/home/homeStyle.module.css'
 import { GeneralInfoServie} from 'services/generalInfoService'
 

@@ -21,7 +21,7 @@
     height: 30;
     margin: 0 auto;
     text-shadow: 2px 2px;
-    background-image: url('../../assets/noImage.jpeg');
+    background-image: url('assets/noImage.jpeg');
     border-radius: 50%;
     border: 0.3rem white solid;
 }
