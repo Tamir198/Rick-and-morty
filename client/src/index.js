@@ -9,7 +9,7 @@ import HomePage from './pages/homePage/HomePage';
 
 import { Provider } from "react-redux";
 import { URLS } from 'constants/url';
-import charactersStore from './redux/charactersStore';
+import charactersStore from 'redux/charactersStore';
 
 import './index.css';
 
