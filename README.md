@@ -1,6 +1,11 @@
-<h1>
+<h3>
 This is a website showing the characters of rick and morty: 
-</h1>
+</h3>
+
+
+This project data is coming from [The Rick and Morty API](https://rickandmortyapi.com/) 
+
+
 
 
 
