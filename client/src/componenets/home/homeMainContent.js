@@ -1,21 +1,19 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import homePageGif from 'assets/homeGif.gif' 
+import homePageGif from 'assets/homeGif.gif'
 import styles from 'componenets/home/homeStyle.module.css'
-import { GeneralInfoServie} from 'services/generalInfoService'
+import { GeneralInfoServie } from 'services/generalInfoService'
+import { useQuery } from 'services/api/useQuery'
 
 export const HomeMainContent = () => {
   const [generalData, setgeneralData] = useState();
 
   const getGeneralInfo = async () => {
-     let {data} = await GeneralInfoServie.getAll();
-     setgeneralData({ ricksIfno: data.ricksIfno, mortysInfo: data.mortysInfo })
+    let { data } = await GeneralInfoServie.getAll();
+    setgeneralData({ ricksIfno: data.ricksIfno, mortysInfo: data.mortysInfo })
   }
-  useEffect(() => {
-    //TODO - check where i should use the loading state from use query
-    getGeneralInfo();
-  }, [])
 
+  useQuery(getGeneralInfo, { onSuccess: (data) => setgeneralData(data), });
 
   return (
     <div className={styles.home__mainContent}>
