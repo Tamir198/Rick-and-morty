@@ -49,9 +49,7 @@ export const useQuery = (fetchAction, { onSuccess, onError, wait, refetchInterva
 
   //Query will be called in non silence mode for the first time
   useEffect(() => {
-    console.log('Waiting')
     if (!wait) {
-      console.log('Not waiting')
       fetchData();
     }
   }, [wait]);
