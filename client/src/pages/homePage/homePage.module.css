@@ -1,11 +1,3 @@
-.homePage__gif {
-    margin: auto;
-    display: block;
-    width: 50rem;
-    max-width: 80%;
-    border-radius: 3rem;
-}
-
 h1 {
     font-size: 3rem;
     width: fit-content;
@@ -18,13 +10,4 @@ p {
     margin: auto;
     margin-bottom: 1rem;
     font-weight: bold;
-}
-
-@media screen and (max-width: 800px) {
-    .homePage__gif {
-        margin: auto;
-        display: block;
-        width: 20rem;
-        border-radius: 1rem;
-    }
 }

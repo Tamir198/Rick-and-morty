@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import { addCharactersPage } from '../redux/reducers/charactersSlice'
+import { addCharactersPage } from 'redux/reducers/charactersSlice'
+import { CharacterService } from 'services/characterService'
 
-import useAxios from './useAxios';
 
 /** 
     * Returns the current characters page data 
@@ -18,7 +18,6 @@ const useHandleCharactersData = (pageNum) => {
   const dispatch = useDispatch();
 
   const [charctersData, setCharctersData] = useState([]);
-  const { fetchData } = useAxios();
 
   useEffect(() => {
     const data = characters.find(character => character.pageNum === pageNum);
@@ -26,7 +25,7 @@ const useHandleCharactersData = (pageNum) => {
     if (data) {
       setCharctersData(data["charctersData"]);
     } else {
-      fetchData(`allCharacters/${pageNum}`).then(res => {
+      CharacterService.getAll(pageNum).then(res => {
         setCharctersData(res.data.characters);
       });
       dispatch(addCharactersPage({ pageNum: pageNum - 1, charctersData }));

@@ -17,11 +17,11 @@
 }
 
 .character__image {
-    width: 15rem;
-    height: 30;
+    width: 10rem;
+    height: 10rem;
     margin: 0 auto;
     text-shadow: 2px 2px;
-    background-image: url('../../assets/noImage.jpeg');
+    background-image: url('assets/noImage.jpeg');
     border-radius: 50%;
     border: 0.3rem white solid;
 }

@@ -1,0 +1,44 @@
+.home__mainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+    flex: 1fr 1fr
+}
+
+.homePage__gif {
+    width: 30%;
+    height: 25%;
+    border-radius: 3rem;
+}
+
+article {
+    color: wheat;
+    width: 30%;
+    margin-top: 7em;
+    background: var(--card-color);
+    border-radius: 1rem;
+    border: 2px solid wheat;
+}
+
+article>* {
+    width: 100%;
+}
+
+.article__title {
+    color: var(--wheat-color);
+    font-size: 2.5em;
+}
+
+.article__text {
+    font-size: 2em;
+}
+
+@media screen and (max-width: 800px) {
+    .homePage__gif {
+        margin: auto;
+        display: block;
+        width: 20rem;
+        border-radius: 1rem;
+    }
+}

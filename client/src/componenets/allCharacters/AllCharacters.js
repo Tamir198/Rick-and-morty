@@ -1,6 +1,6 @@
-import Character from '../character/Character';
-import CharacterModel from '../../models/CharacterModel'
-import styles from './AllCharacters.module.css'
+import Character from 'componenets/character/Character';
+import CharacterModel from 'models/CharacterModel';
+import styles from 'componenets/allCharacters/AllCharacters.module.css'
 
 import useHandleCharactersData from '../../hooks/useHandleCharactersData';
 

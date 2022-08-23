@@ -27,6 +27,10 @@ body {
 
 .title--green {
     background-color: var(--green-title-color);
+    font-size: 2em;
+    width: fit-content;
+    border: none;
+    border: 0.15em solid var(--card-border-color);
 }
 
 .title--details {
