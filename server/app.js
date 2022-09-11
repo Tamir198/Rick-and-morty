@@ -1,32 +1,31 @@
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose';
 import 'dotenv/config'
+import { formConnection } from './services/db/db.js';
+
 import characterRoutes from "./routes/character.js";
 import generalInfoRoutes from "./routes/generalInfo.js";
+import usersRouts from "./routes/users.js";
 
 const loadExtensions = async function (app) {
   app.use(cors());
-  try {
-    mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
-  } catch (error) {
-    console.log('Error connecting to Mongo')
-  }
+  app.use(express.json());
+
+  formConnection();
 }
 
 const loadRoutes = function (app) {
   app.use(characterRoutes);
   app.use(generalInfoRoutes);
+  app.use(usersRouts);
 }
 
 const creatApp = () => {
   const app = express();
-  // app.use(cors());
   loadExtensions(app);
   loadRoutes(app);
 
   return app;
-
 }
 
 
