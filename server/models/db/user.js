@@ -1,4 +1,3 @@
-import { mongo } from "mongoose";
 import { getMongooseinstance } from "../../services/db/db.js";
 
 const mongoose = getMongooseinstance();
