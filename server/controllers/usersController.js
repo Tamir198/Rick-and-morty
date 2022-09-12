@@ -7,9 +7,9 @@ export function generateToken(req, res) {
 
 export async function loginUser(req, res) {
   const { username, password } = req.body;
-  const user = await userService.getUser(username);
+  const user = await userService.getUser(username,password);
 
-  if (user.name != username) {
+  if (!user || user.name != username || user.password != password) {
     return res.status(403).json({
       error: "invalid login",
     });
