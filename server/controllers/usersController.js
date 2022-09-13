@@ -1,3 +1,4 @@
+import { StatusCodes } from "../utils/statusCodeHelper.js"
 import jwt from "jsonwebtoken"
 import userService from "../services/userService.js";
 
@@ -7,10 +8,10 @@ export function generateToken(req, res) {
 
 export async function loginUser(req, res) {
   const { username, password } = req.body;
-  const user = await userService.getUser(username,password);
+  const user = await userService.getUser(username, password);
 
   if (!user || user.name !== username || user.password !== password) {
-    return res.status(403).json({
+    return res.status(StatusCodes.FORBIDDEN).json({
       error: "invalid login",
     });
   }

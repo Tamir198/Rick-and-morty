@@ -5,7 +5,7 @@ import { formConnection } from './services/db/db.js';
 
 import characterRoutes from "./routes/character.js";
 import generalInfoRoutes from "./routes/generalInfo.js";
-import usersRouts from "./routes/users.js";
+import usersRoutes from "./routes/users.js";
 
 const loadExtensions = async function (app) {
   app.use(cors());
@@ -17,7 +17,7 @@ const loadExtensions = async function (app) {
 const loadRoutes = function (app) {
   app.use(characterRoutes);
   app.use(generalInfoRoutes);
-  app.use(usersRouts);
+  app.use(usersRoutes);
 }
 
 const creatApp = () => {

@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-
 export function formConnection() {
   try {
     console.log(process.env.MONGO_URL)
@@ -9,7 +8,7 @@ export function formConnection() {
       { useNewUrlParser: true, useUnifiedTopology: true }
     );
   } catch (error) {
-    return 'Error connecting to Mongo'
+    return `Error connecting to Mongo ${error}`
   }
 }
 
