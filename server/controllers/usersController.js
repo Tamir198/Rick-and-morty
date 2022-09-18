@@ -1,10 +1,11 @@
 import { StatusCodes } from "../utils/statusCodeHelper.js"
 import userService from "../services/userService.js";
+import { USER } from "../constants/texts.js";
 
 export async function signUpUser(req, res) {
   const { username, password } = req.body;
   const doesExist = await userService.getUser(username, password);
-  if(doesExist) return res.send("User taken"); 
+  if(doesExist) return res.send(USER.USER_TAKEN); 
 
   const newUser = await userService.createuser(username, password);
   const token = userService.generateUserToken(username,password);
@@ -18,7 +19,7 @@ export async function loginUser(req, res) {
 
   if (!user || user.name !== username || user.password !== password) {
     return res.status(StatusCodes.FORBIDDEN).json({
-      error: "invalid login",
+      error: USER.INVALID_LOGIN,
     });
   }
 
