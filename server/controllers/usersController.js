@@ -1,9 +1,15 @@
 import { StatusCodes } from "../utils/statusCodeHelper.js"
-import jwt from "jsonwebtoken"
 import userService from "../services/userService.js";
 
-export function generateToken(req, res) {
-  res.send(process.env.TOKEN_SECRET);
+export async function signUpUser(req, res) {
+  const { username, password } = req.body;
+  const doesExist = await userService.getUser(username, password);
+  if(doesExist) return res.send("User taken"); 
+
+  const newUser = await userService.createuser(username, password);
+  const token = userService.generateUserToken(username,password);
+  res.cookie("token", token);
+  res.send(newUser);  
 }
 
 export async function loginUser(req, res) {
@@ -16,7 +22,7 @@ export async function loginUser(req, res) {
     });
   }
 
-  const token = jwt.sign({ user, password }, process.env.TOKEN_SECRET, { expiresIn: "1h" });
+  const token = userService.generateUserToken(username,password);
   res.cookie("token", token);
   res.send({ username, isLoggedIn: true })
 }
