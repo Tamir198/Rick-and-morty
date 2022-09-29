@@ -7,9 +7,17 @@
 }
 
 .homePage__gif {
-    width: 30%;
-    height: 25%;
     border-radius: 3rem;
+    height: 20rem;
+}
+
+.home__mainContent * {
+    height: fit-content;
+}
+
+.info__container {
+    display: flex;
+    flex-direction: row;
 }
 
 article {
@@ -40,5 +48,16 @@ article>* {
         display: block;
         width: 20rem;
         border-radius: 1rem;
+    }
+    .home__mainContent {
+        flex-direction: column-reverse;
+        gap: 10rem;
+        padding: 2rem;
+        align-items: center;
+    }
+    .home__mainContent * {
+        font-size: 1.8rem;
+        font-family: 900;
+        width: 80%;
     }
 }
