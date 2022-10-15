@@ -6,6 +6,9 @@
         "start": "nodemon server.js",
         "start-server": "node server.js"
     },
+    "engines": {
+        "node": "14.x"
+    },
     "dependencies": {
         "axios": "^0.26.0",
         "cors": "^2.8.5",
