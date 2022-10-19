@@ -1,3 +1,9 @@
+Link to the website
+-
+https://rickandmortydocs.netlify.app/home
+
+---
+
 <h3>
 This is a website showing the characters of rick and morty: 
 </h3>
