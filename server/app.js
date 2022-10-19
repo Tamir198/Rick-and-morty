@@ -8,7 +8,7 @@ import generalInfoRoutes from "./routes/generalInfo.js";
 import usersRoutes from "./routes/users.js";
 
 const loadExtensions = async function (app) {
-  app.use(cors());
+  app.use(cors('*'));
   app.use(express.json());
 
   formConnection();
