@@ -61,3 +61,24 @@ article>* {
         width: 80%;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .homePage__gif {
+        display: block;
+        border-radius: 1rem;
+    }
+    .home__mainContent {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 2rem;
+        align-items: center;
+    }
+    .home__mainContent * {
+        font-size: 1.5rem;
+        font-family: 900;
+        width: 90%;
+    }
+    .title--green {
+        width: 90%;
+    }
+}
