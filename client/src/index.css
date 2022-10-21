@@ -72,3 +72,13 @@ a,
         font-size: 1.2rem;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .nav__item>* {
+        padding: 0;
+        height: 3rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+    }
+}
