@@ -10,6 +10,11 @@ const options = {
     },
     servers: [
       {
+        url: "https://rickandmortybackend.vercel.app/",
+        description: "Production"
+        
+      },
+      {
         url: "http://localhost:4000/",
         description: "Development"
       }
