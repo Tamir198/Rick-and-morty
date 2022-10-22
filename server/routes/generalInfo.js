@@ -40,9 +40,7 @@ import { getGeneralInfo } from '../controllers/generalInfoController.js';
  *         content:
  *           application/json:
  *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/components/schemas/General info'
+ *                  $ref: '#/components/schemas/General info'
  */
 router.get("/generalInfo", getGeneralInfo);
 

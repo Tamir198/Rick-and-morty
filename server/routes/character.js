@@ -92,8 +92,6 @@ router.get("/allCharacters/:pageNumber", getAllCharacters);
  *         content:
  *           application/json:
  *             schema:
- *               type: array
- *               items:
  *                 $ref: '#/components/schemas/Character'
  */
 
@@ -112,8 +110,6 @@ router.get("/allCharacters/:pageNumber", getAllCharacters);
  *         content:
  *           application/json:
  *             schema:
- *               type: array
- *               items:
  *                 $ref: '#/components/schemas/AllCharacters'
  */
 
