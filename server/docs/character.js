@@ -78,7 +78,7 @@
  *         name: id
  *     responses:
  *       200:
- *         description: The list of the books
+ *         description: Character decsciption
  *         content:
  *           application/json:
  *             schema:
