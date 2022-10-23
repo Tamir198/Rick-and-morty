@@ -3,7 +3,7 @@
  * tags:
  *   name: Chareacter
  *   description: The character API
- */
+*/
 
 /**
  * @swagger
@@ -69,6 +69,7 @@
 
 /**
  * @swagger
+ * path: 
  * /singleCharacter/{id}:
  *   get:
  *     summary: Get single character data
@@ -87,6 +88,7 @@
 
 /**
  * @swagger
+ * path:
  * /allCharacters/{pageNumber}:
  *   get:
  *     summary: Get data on multyple characters

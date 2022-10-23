@@ -1,4 +1,5 @@
 import swaggerJSDoc from 'swagger-jsdoc';
+import confige from '../confige.js';
 
 const options = {
   definition: {
@@ -12,16 +13,14 @@ const options = {
       {
         url: "https://rickandmortybackend.vercel.app/",
         description: "Production"
-        
       },
       {
-        url: "http://localhost:4000/",
+        url: `http://localhost:${confige.port}/`,
         description: "Development"
       }
     ]
   },
-  apis: ['./routes/*.js','./docs/*.js'],
+  apis: [`./docs/*.js`],
 };
-
 
 export default swaggerJSDoc(options);
