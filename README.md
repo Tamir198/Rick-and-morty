@@ -30,9 +30,6 @@ Mobile view
 <img src="https://user-images.githubusercontent.com/34707669/192979253-332d2380-5771-40d7-9556-cfba2837417f.png" width="300" height="450">
 </p>
 
-![image](https://user-images.githubusercontent.com/34707669/192980245-d12e50e7-76fc-4b6a-8c80-a6d446d37d2c.png)
-
----
 
 To test the backend you can open swagger:
 ---
