@@ -25,6 +25,7 @@
 
 /**
  * @swagger
+ * path:
  * /generalInfo:
  *   get:
  *     summary: Returns the data regarding single character
