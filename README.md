@@ -13,25 +13,6 @@ This project data is coming from [The Rick and Morty API](https://rickandmortyap
 
 ---
 
-To test the backend you can open swagger:
----
-
-- Run `npm start`
-- open `http://localhost:4000/api-docs/` in your browser
-- you can check and test the beackend now:
-
-![image](https://user-images.githubusercontent.com/34707669/197481462-9f6dc708-91d9-4ef8-8e30-8e6872039eb0.png)
- 
-
-
-
----
-
-
-
-
-
-
 Desktop view
 --
 
@@ -50,6 +31,19 @@ Mobile view
 </p>
 
 ![image](https://user-images.githubusercontent.com/34707669/192980245-d12e50e7-76fc-4b6a-8c80-a6d446d37d2c.png)
+
+---
+
+To test the backend you can open swagger:
+---
+
+- Run `npm start`
+- open `http://localhost:4000/api-docs/` in your browser
+- you can check and test the beackend now:
+
+![image](https://user-images.githubusercontent.com/34707669/197481462-9f6dc708-91d9-4ef8-8e30-8e6872039eb0.png)
+
+---
 
 
 
