@@ -1,13 +1,13 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 export const charactersSlice = createSlice({
   name: "Characters",
-  initialState:  [],
+  initialState: [],
   reducers: {
     addCharactersPage: (state, action) => {
       state.push(action.payload);
-    }
-  }
+    },
+  },
 });
 
 export const { addCharactersPage } = charactersSlice.actions;

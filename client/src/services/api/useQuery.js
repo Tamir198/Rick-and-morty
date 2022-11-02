@@ -1,7 +1,10 @@
 import { useState, useCallback, useEffect } from "react";
 
 //uswQuery immidiate imvoke the api
-export const useQuery = (fetchAction, { onSuccess, onError, wait, refetchInterval } = {}) => {
+export const useQuery = (
+  fetchAction,
+  { onSuccess, onError, wait, refetchInterval } = {}
+) => {
   const [dataState, setDataState] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isRefetch, setIsRefetch] = useState(false);
@@ -9,9 +12,7 @@ export const useQuery = (fetchAction, { onSuccess, onError, wait, refetchInterva
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState(null);
 
-
   const fetchActionData = useCallback(async () => {
-
     const { data } = await fetchAction();
 
     if (onSuccess) {
@@ -20,38 +21,42 @@ export const useQuery = (fetchAction, { onSuccess, onError, wait, refetchInterva
 
     setDataState(data);
     setIsSuccess(true);
+  }, [fetchAction, onSuccess]);
 
-  }, []);
+  const fetchData = useCallback(
+    async (isSilence) => {
+      try {
+        setIsLoading(!isSilence);
+        setIsSilenceLoading(isSilence);
+        setIsSuccess(false);
 
-  const fetchData = useCallback(async (isSilence) => {
-    try {
-      setIsLoading(!isSilence);
-      setIsSilenceLoading(isSilence);
-      setIsSuccess(false);
-
-      await fetchActionData();
-
-    } catch (error) {
-      //TODO make the error more generic with error builder
-      setError(error);
-    }
-
-  }, []);
+        await fetchActionData();
+      } catch (error) {
+        //TODO make the error more generic with error builder
+        setError(error);
+      }
+    },
+    [fetchActionData]
+  );
 
   //We can use fetchData(true), but this is more clean
-  const silenceFetchData = useCallback(() => fetchData(true), []);
+  const silenceFetchData = useCallback(() => fetchData(true), [fetchData]);
 
-  const handleRefresh = useCallback(async ({ isSilence } = {}) => {
-    setIsRefetch(true);
-    await fetchData(isSilence);
-    setIsRefetch(false);
-  }, []);
+  const handleRefresh = useCallback(
+    async ({ isSilence } = {}) => {
+      setIsRefetch(true);
+      await fetchData(isSilence);
+      setIsRefetch(false);
+    },
+    [fetchData]
+  );
 
   //Query will be called in non silence mode for the first time
   useEffect(() => {
     if (!wait) {
       fetchData();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wait]);
 
   //Polling
@@ -63,15 +68,17 @@ export const useQuery = (fetchAction, { onSuccess, onError, wait, refetchInterva
 
       return () => clearInterval(interval);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refetchInterval]);
 
   return {
-    isLoading, isRefetch,
+    isLoading,
+    isRefetch,
     isSilenceLoading,
     isSuccess,
     error,
     handleRefresh,
     data: dataState,
     setData: setDataState,
-  }
-}
+  };
+};

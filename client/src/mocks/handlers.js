@@ -1,12 +1,18 @@
-import { rest } from 'msw';
-import { getSingleCharacter } from 'mocks/controllers/singleCharater';
-import { getAllCharaters } from 'mocks/controllers/allCharaters';
-import { SERVER } from 'constants/url';
+import { rest } from "msw";
+import { getSingleCharacter } from "./controllers/singleCharacter";
+import { getAllCharacters } from "./controllers/allCharacters";
+import { apiUrl, SERVER } from "constants/url";
 
-const baseAdress = SERVER.BASE_URL;
+const baseAddress = SERVER.BASE_URL;
 
 //TODO make this more generic - one handlers array per feature
 export const handlers = [
-  rest.get(`${baseAdress}/singlecharacter/1`, getSingleCharacter),
-  rest.get(`${baseAdress}/allCharacters/1`, getAllCharaters)
-]
+  rest.get(
+    `${baseAddress}${apiUrl({ id: 1 }).characters.getById}`,
+    getSingleCharacter
+  ),
+  rest.get(
+    `${baseAddress}${apiUrl({ id: 1 }).characters.getAll}`,
+    getAllCharacters
+  ),
+];

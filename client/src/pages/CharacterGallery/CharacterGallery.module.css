@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    font-size: 1rem;
+    color: var(--white);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ul {
+    display: flex;
+    justify-content: flex;
+    list-style: none;
+}
+
+.currentPage {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-top: 1.2rem;
+}
+
+li {
+    border: 2px solid;
+    border-color: var(--wheat-color);
+}
+
+li:hover {
+    cursor: pointer;
+    color: var(--li-hover-color);
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        font-size: 1rem;
+        width: 100%;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
