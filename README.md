@@ -5,12 +5,13 @@ https://rickandmortydocs.netlify.app/home
 ---
 
 <h3>
-This is a website showing the characters of rick and morty: 
+This is a website showing the characters of rick and morty + cool information about them. 
 </h3>
 
 
-This project data is coming from [The Rick and Morty API](https://rickandmortyapi.com/) 
+This project data is coming from [The Rick and Morty API](https://rickandmortyapi.com/).
 
+---
 
 Desktop view
 --
@@ -29,7 +30,17 @@ Mobile view
 <img src="https://user-images.githubusercontent.com/34707669/192979253-332d2380-5771-40d7-9556-cfba2837417f.png" width="300" height="450">
 </p>
 
-![image](https://user-images.githubusercontent.com/34707669/192980245-d12e50e7-76fc-4b6a-8c80-a6d446d37d2c.png)
+
+To test the backend you can open swagger:
+---
+
+- Run `npm start`
+- open `http://localhost:4000/api-docs/` in your browser
+- you can check and test the beackend now:
+
+![image](https://user-images.githubusercontent.com/34707669/197481462-9f6dc708-91d9-4ef8-8e30-8e6872039eb0.png)
+
+---
 
 
 
