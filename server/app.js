@@ -1,18 +1,18 @@
-import express from 'express';
-import cors from 'cors';
-import 'dotenv/config'
-import { formConnection } from './services/db/db.js';
+import express from "express";
+import cors from "cors";
+import "dotenv/config";
+import { formConnection } from "./services/db/db.js";
 import characterRoutes from "./routes/character.js";
 import generalInfoRoutes from "./routes/generalInfo.js";
 import usersRoutes from "./routes/users.js";
-import swaggerRoutes from './routes/swagger.js';
+import swaggerRoutes from "./routes/swagger.js";
 
 const loadExtensions = async function (app) {
   app.use(cors("*"));
   app.use(express.json());
 
   // formConnection();
-}
+};
 
 const loadRoutes = function (app) {
   app.use((req, res, next) => {
@@ -30,11 +30,11 @@ const loadRoutes = function (app) {
 
   app.use(swaggerRoutes);
   app.use(characterRoutes);
-  app.use(generalInfoRoutes); 
+  app.use(generalInfoRoutes);
   app.use(usersRoutes);
 };
 
-const creatApp = () => {
+const createApp = () => {
   const app = express();
   loadExtensions(app);
   loadRoutes(app);
@@ -42,4 +42,4 @@ const creatApp = () => {
   return app;
 };
 
-export default creatApp;
+export default createApp;
