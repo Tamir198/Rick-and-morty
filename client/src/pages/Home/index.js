@@ -7,6 +7,7 @@ import { TopDescription } from "./TopDescription";
 import styles from "./homeStyle.module.css";
 
 const Home = () => {
+  //TODO: use separated hook for this
   const { generalInfo } = useSelector((state) => state.generalInfo);
   const dispatch = useDispatch();
 

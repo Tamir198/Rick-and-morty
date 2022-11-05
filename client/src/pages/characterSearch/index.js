@@ -7,6 +7,7 @@ import styles from "./characterSearch.module.css";
 import { searchCharacterById } from "redux/reducers/character";
 
 const CharacterSearch = () => {
+  //TODO: use separated hook for this
   const dispatch = useDispatch();
   const { id: characterId, data } = useSelector(
     (state) => state.characters.currentCharacter

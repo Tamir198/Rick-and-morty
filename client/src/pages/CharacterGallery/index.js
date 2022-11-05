@@ -6,12 +6,14 @@ import { config } from "constants/config";
 import styles from "./CharacterGallery.module.css";
 
 const CharacterGallery = () => {
+  //TODO: use separated hook for this
   const {
     pageCount,
     startingPageNum,
     pageRangeDisplayed,
     marginPagesDisplayed,
   } = config;
+
   const [currPage, setCurrPage] = useState(startingPageNum);
 
   //todo change all handlers to use callback
