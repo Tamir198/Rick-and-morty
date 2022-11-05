@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCharactersPage } from "redux/reducers/charactersSlice";
-import { CharacterService } from "services/character-service";
-
+import { fetchCharacters } from "redux/actions";
 /** 
     * Returns the current characters page data 
     * 
@@ -12,25 +10,15 @@ import { CharacterService } from "services/character-service";
     @pageNum is the wanted page number (can be found inside AllCharacters component)
 */
 export const useHandleCharacters = ({ pageNum }) => {
-  const { characters } = useSelector((state) => state);
+  const { characters } = useSelector((state) => state.characters);
   const dispatch = useDispatch();
 
-  const [charactersData, setCharactersData] = useState([]);
-
-  //todo extract use effect login to redux thunk + pagination
   useEffect(() => {
-    const data = characters.find((character) => character.pageNum === pageNum);
-
-    if (data) {
-      setCharactersData(data["charactersData"]);
-    } else {
-      CharacterService.getAll(pageNum).then((res) => {
-        setCharactersData(res.data.characters);
-      });
-      dispatch(addCharactersPage({ pageNum: pageNum - 1, charactersData }));
+    if (!characters[pageNum]) {
+      dispatch(fetchCharacters(pageNum));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageNum]);
 
-  return charactersData;
+  return { characters: characters[pageNum] };
 };

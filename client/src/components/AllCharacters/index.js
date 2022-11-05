@@ -6,17 +6,21 @@ import { useHandleCharacters } from "./useHandleCharacters";
 import styles from "./AllCharacters.module.css";
 
 export const AllCharacters = ({ pageNum }) => {
-  const charactersData = useHandleCharacters({ pageNum });
+  const { characters } = useHandleCharacters({ pageNum });
+
+  if (!characters) return "Loading";
 
   return (
     <div className={styles.grid}>
-      {charactersData.map(({ id, ...rest }) => (
-        <Character
-          key={id}
-          className={classNames(styles.grid__item, styles.character__grid)}
-          character={new CharacterModel({ id, ...rest })}
-        />
-      ))}
+      {characters.map((character) => {
+        return (
+          <Character
+            key={character.id}
+            className={classNames(styles.grid__item, styles.character__grid)}
+            character={new CharacterModel({ ...character })}
+          />
+        );
+      })}
     </div>
   );
 };

@@ -1,7 +1,14 @@
+import classNames from "classnames";
 import styles from "./Character.module.css";
 
-export const Character = ({ name, id, status, species, origin, image }) => (
-  <div className={styles.character__container} data-testid="character">
+export const Character = ({
+  className,
+  character: { name, id, status, species, origin, image },
+}) => (
+  <div
+    className={classNames(className, styles.character__container)}
+    data-testid="character"
+  >
     <div>
       <p className={styles.title}>{name}</p>
       <h2>Character number {id}</h2>

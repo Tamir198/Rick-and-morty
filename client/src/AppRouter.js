@@ -10,12 +10,10 @@ const PageNotFound = lazy(() => import("pages/PageNotFound"));
 export const AppRouter = () => (
   <Suspense fallback={<>"Loading..."</>}>
     <Routes>
-      <Route path="/" element={<Home />}>
-        <Route path={URLS.HOME} element={<Home />} />
-        <Route path={URLS.ALL_CHARACTERS} element={<CharacterGallery />} />
-        <Route path={URLS.SINGLE_CHARACTER} element={<CharacterSearch />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Route>
+      <Route path={URLS.HOME} element={<Home />} />
+      <Route path={URLS.ALL_CHARACTERS} element={<CharacterGallery />} />
+      <Route path={URLS.SINGLE_CHARACTER} element={<CharacterSearch />} />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   </Suspense>
 );

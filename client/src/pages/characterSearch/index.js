@@ -1,25 +1,16 @@
-import { useState } from "react";
 import { Character } from "components";
 import { Character as CharacterModel } from "models";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCharacterById } from "redux/actions";
+
 import styles from "./characterSearch.module.css";
-import { CharacterService } from "services";
+import { searchCharacterById } from "redux/reducers/character";
 
 const CharacterSearch = () => {
-  let pageNumber = 0;
-  const [characterData, setCharacterData] = useState();
-  const setPageNumber = (pageNum) => {
-    pageNumber = pageNum;
-  };
-
-  //todo change this to redux thunk and get rid of state
-  const getCharacterById = async () => {
-    const characterId = pageNumber;
-    if (characterId > 800) return;
-
-    await CharacterService.getById(characterId).then((res) => {
-      setCharacterData(res.data);
-    });
-  };
+  const dispatch = useDispatch();
+  const { id: characterId, data } = useSelector(
+    (state) => state.characters.currentCharacter
+  );
 
   return (
     <>
@@ -27,21 +18,26 @@ const CharacterSearch = () => {
         Enter A number - get a character
       </h1>
       <div className={styles.searchBar__container}>
+        {/* TODO: add validation */}
         <input
           type="number"
-          onChange={({ target: { value } }) => setPageNumber(value)}
+          value={characterId}
+          onChange={({ target: { value } }) =>
+            dispatch(searchCharacterById(value))
+          }
           placeholder="1-800"
           min="1"
           max="800"
         />
-        <button type="submit" onClick={getCharacterById}>
+        <button
+          type="submit"
+          onClick={() => dispatch(fetchCharacterById(characterId))}
+        >
           Enter
         </button>
       </div>
 
-      {characterData && (
-        <Character character={new CharacterModel({ ...characterData })} />
-      )}
+      {data && <Character character={new CharacterModel({ ...data })} />}
       <h1 className="centered-text title">Waba laba dab dab</h1>
     </>
   );
