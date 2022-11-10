@@ -1,7 +1,7 @@
 import ReactPaginate from "https://cdn.skypack.dev/react-paginate@7.1.3";
 import { AllCharacters } from "components";
 import { config } from "constants/config";
-import { useHandleCurrPage } from "./useHandleCurrPage";
+import { useCurrPage } from "./useCurrPage";
 
 import styles from "./CharacterGallery.module.css";
 
@@ -13,7 +13,7 @@ const CharacterGallery = () => {
     marginPagesDisplayed,
   } = config;
 
-  const { currPage, handlePageClick } = useHandleCurrPage({ startingPageNum });
+  const { currPage, handlePageClick } = useCurrPage({ startingPageNum });
 
   return (
     <div>

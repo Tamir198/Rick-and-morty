@@ -2,10 +2,10 @@ import homePageGif from "assets/homeGif.gif";
 import { TopDescription } from "./TopDescription";
 
 import styles from "./homeStyle.module.css";
-import { useHandleGeneralInfo } from "./useHandleGeneralnfo";
+import { useGeneralInfo } from "./useGeneralInfo";
 
 const Home = () => {
-  const generalInfo = useHandleGeneralInfo();
+  const generalInfo = useGeneralInfo();
 
   return (
     <>

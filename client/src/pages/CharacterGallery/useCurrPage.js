@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 
-export const useHandleCurrPage = ({ startingPageNum }) => {
+export const useCurrPage = ({ startingPageNum }) => {
   const [currPage, setCurrPage] = useState(startingPageNum);
 
   const handlePageClick = useCallback(({ selected }) => {
