@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:4000/";
+const baseURL = "https://rickandmortybackend.vercel.app/";
 
 export const Api = axios.create({
   baseURL,

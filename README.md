@@ -1,24 +1,48 @@
+Link to the website
+-
+https://rickandmortydocs.netlify.app/home
+
+---
+
 <h3>
-This is a website showing the characters of rick and morty: 
+This is a website showing the characters of rick and morty + cool information about them. 
 </h3>
 
 
-This project data is coming from [The Rick and Morty API](https://rickandmortyapi.com/) 
+This project data is coming from [The Rick and Morty API](https://rickandmortyapi.com/).
+
+---
+
+Desktop view
+--
+
+![image](https://user-images.githubusercontent.com/34707669/192978065-223af15b-df8f-4997-9000-27e47cd28ec4.png)
+![image](https://user-images.githubusercontent.com/34707669/192978501-733c1a83-ef02-4800-b880-1ecd6f183d54.png)
+![image](https://user-images.githubusercontent.com/34707669/192978368-d2f8284f-b223-4299-975d-9032e1a50df8.png)
+
+
+Mobile view
+--
+
+
+<p float="left">
+<img src="https://user-images.githubusercontent.com/34707669/192978719-966c9a67-de83-493f-80d6-0a623c9f427a.png" width="300" height="450">
+<img src="https://user-images.githubusercontent.com/34707669/192979253-332d2380-5771-40d7-9556-cfba2837417f.png" width="300" height="450">
+</p>
+
+
+To test the backend you can open swagger:
+---
+
+- Run `npm start`
+- open `http://localhost:4000/api-docs/` in your browser
+- you can check and test the beackend now:
+
+![image](https://user-images.githubusercontent.com/34707669/197481462-9f6dc708-91d9-4ef8-8e30-8e6872039eb0.png)
+
+---
 
 
 
 
 
-![image](https://user-images.githubusercontent.com/34707669/160676146-da4860e2-8326-4a6b-a6a4-b90412429648.png)
-![image](https://user-images.githubusercontent.com/34707669/160676227-332c5a64-4b45-4c8c-8aff-7c3db2fb9627.png)
-![image](https://user-images.githubusercontent.com/34707669/160676261-7ea8b835-1186-4797-b915-469e01f75db1.png)
-![image](https://user-images.githubusercontent.com/34707669/160676324-cedc401a-2f49-445c-b60f-3fa94c66f275.png)
-
-
-<h3>
-How it looks on mobile:
-<h3>
-
-![image](https://user-images.githubusercontent.com/34707669/160676945-2b857924-b3e8-457c-a066-481a0eb6a3cb.png)
-![singleCharacterMobile](https://user-images.githubusercontent.com/34707669/160677418-65190518-0adc-4004-b36b-d08837c04528.png)
-![image](https://user-images.githubusercontent.com/34707669/160678462-fd33ebb6-8f19-4355-ba63-0a67a726453d.png)

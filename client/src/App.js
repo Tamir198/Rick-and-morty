@@ -1,25 +1,17 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, BrowserRouter } from "react-router-dom";
+import { Navigation } from "components";
+import { AppRouter } from "./AppRouter";
+import { Provider } from "react-redux";
+import charactersStore from "redux/store";
 
-import HomeRout from 'routes/home'
-import AllcharactersRout from 'routes/allcharacters'
-import SingleCharacterRout from 'routes/singleCharacter'
-import { URLS } from "constants/url";
-
-
-
-import 'index.css'
-
-function App() {
-  return (
-    <div>
-      <nav className="nav__item">
-        <NavLink to={URLS.HOME}>{HomeRout}</NavLink>
-        <NavLink to={URLS.ALL_CHARACTERS}>{AllcharactersRout}</NavLink>
-        <NavLink to={URLS.SINGLE_CHARACTER}>{SingleCharacterRout}</NavLink>
-      </nav>
+const App = () => (
+  <Provider store={charactersStore}>
+    <BrowserRouter>
       <Outlet />
-    </div>
-  )
-}
+      <Navigation />
+      <AppRouter />
+    </BrowserRouter>
+  </Provider>
+);
 
 export default App;

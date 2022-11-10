@@ -7,3 +7,5 @@ const app = createApp();
 app.listen(confige.port, () => {
     console.log(`Listening on port ${confige.port}`);
 })
+
+export default app;
