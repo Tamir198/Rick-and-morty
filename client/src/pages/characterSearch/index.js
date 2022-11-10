@@ -1,17 +1,14 @@
 import { Character } from "components";
 import { Character as CharacterModel } from "models";
-import { useDispatch, useSelector } from "react-redux";
 import { fetchCharacterById } from "redux/actions";
 
-import styles from "./characterSearch.module.css";
 import { searchCharacterById } from "redux/reducers/character";
+import { useCurrentCharacter } from "./useCurrentCharacter";
+
+import styles from "./characterSearch.module.css";
 
 const CharacterSearch = () => {
-  //TODO: use separated hook for this
-  const dispatch = useDispatch();
-  const { id: characterId, data } = useSelector(
-    (state) => state.characters.currentCharacter
-  );
+  const { dispatch, id: characterId, data } = useCurrentCharacter();
 
   return (
     <>

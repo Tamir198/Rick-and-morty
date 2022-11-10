@@ -1,20 +1,11 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import homePageGif from "assets/homeGif.gif";
-import { fetchGeneralInfo } from "redux/actions";
 import { TopDescription } from "./TopDescription";
 
 import styles from "./homeStyle.module.css";
+import { useGeneralInfo } from "./useGeneralInfo";
 
 const Home = () => {
-  //TODO: use separated hook for this
-  const { generalInfo } = useSelector((state) => state.generalInfo);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchGeneralInfo());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const generalInfo = useGeneralInfo();
 
   return (
     <>
